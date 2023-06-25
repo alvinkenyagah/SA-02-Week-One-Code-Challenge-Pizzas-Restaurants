@@ -1,6 +1,8 @@
 class RestaurantsController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with:  :render_unprocessable_entity
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response 
+    skip_before_action :verify_authenticity_token, only: [:destroy]
+
     
       # GET /restaurants
       def index
