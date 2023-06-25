@@ -8,7 +8,7 @@
 
 
 10.times do
-pizzas = Pizza.create(name:,ingredients:)
+pizzas = Pizza.create(name:Faker::Food.dish,ingredients:Faker::Food.ingredient)
 end
 
 10.times do
