@@ -1,5 +1,5 @@
-# SA-02-Week-One-Code-Challenge-Pizzas-Restaurants
-
+# Pizzas-Restaurants API
+ 
 ## Description
 For this project, I'll be working on an API for tracking pizzas for restaurants.
 
