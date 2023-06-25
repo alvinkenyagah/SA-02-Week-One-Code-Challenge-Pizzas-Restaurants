@@ -14,7 +14,7 @@ class RestaurantsController < ApplicationController
       def show
         # pizzas = find_pizzas
         restaurants = find_restaurants
-          render json: restaurants, pizzas,  except: [:id, :created_at, :updated_at], status: :ok                 
+          render json: restaurants, except: [:id, :created_at, :updated_at], status: :ok                 
       end
 
     
@@ -45,3 +45,4 @@ class RestaurantsController < ApplicationController
       end
     
     end
+

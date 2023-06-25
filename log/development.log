@@ -32727,3 +32727,143 @@ app/models/restaurant.rb:8:in `pizzas'
 app/models/restaurant.rb:8:in `pizzas'
 app/controllers/restaurants_controller.rb:16:in `show'
 Started GET "/restaurants/" for 127.0.0.1 at 2023-06-25 22:54:45 +0300
+Started GET "/pizzas" for 127.0.0.1 at 2023-06-25 23:14:27 +0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PizzasController):
+  
+actionpack (6.1.7.3) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.7.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.7.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.3) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (6.1.7.3) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/method_override.rb:24:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.3) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+railties (6.1.7.3) lib/rails/engine.rb:539:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/restaurants" for 127.0.0.1 at 2023-06-25 23:14:42 +0300
+  
+SyntaxError (/home/alvin/hut/app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting =>
+...nder json: restaurants, pizzas,  except: [:id, :created_at, ...
+...                              ^
+/home/alvin/hut/app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting `end'
+...:id, :created_at, :updated_at], status: :ok                 
+...                              ^
+):
+  
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting =>
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting `end'
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting =>
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting `end'
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting =>
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting `end'
+Started GET "/restaurants" for 127.0.0.1 at 2023-06-25 23:15:33 +0300
+  
+SyntaxError (/home/alvin/hut/app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting =>
+...nder json: restaurants, pizzas,  except: [:id, :created_at, ...
+...                              ^
+/home/alvin/hut/app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting `end'
+...:id, :created_at, :updated_at], status: :ok                 
+...                              ^
+/home/alvin/hut/app/controllers/restaurants_controller.rb:48: syntax error, unexpected `end', expecting end-of-input
+    end
+    ^~~
+):
+  
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting =>
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting `end'
+app/controllers/restaurants_controller.rb:48: syntax error, unexpected `end', expecting end-of-input
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting =>
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting `end'
+app/controllers/restaurants_controller.rb:48: syntax error, unexpected `end', expecting end-of-input
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting =>
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting `end'
+app/controllers/restaurants_controller.rb:48: syntax error, unexpected `end', expecting end-of-input
+Started GET "/restaurants" for 127.0.0.1 at 2023-06-25 23:16:08 +0300
+  
+SyntaxError (/home/alvin/hut/app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting =>
+...nder json: restaurants, pizzas,  except: [:id, :created_at, ...
+...                              ^
+/home/alvin/hut/app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting `end'
+...:id, :created_at, :updated_at], status: :ok                 
+...                              ^
+):
+  
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting =>
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting `end'
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting =>
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting `end'
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting =>
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting `end'
+Started GET "/restaurants" for 127.0.0.1 at 2023-06-25 23:16:29 +0300
+  
+SyntaxError (/home/alvin/hut/app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting =>
+...nder json: restaurants, pizzas,  except: [:id, :created_at, ...
+...                              ^
+/home/alvin/hut/app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting `end'
+...:id, :created_at, :updated_at], status: :ok                 
+...                              ^
+):
+  
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting =>
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting `end'
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting =>
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting `end'
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting =>
+app/controllers/restaurants_controller.rb:17: syntax error, unexpected ',', expecting `end'
+Started GET "/restaurants" for 127.0.0.1 at 2023-06-25 23:17:34 +0300
+Processing by RestaurantsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 10.1ms | ActiveRecord: 1.2ms | Allocations: 9236)
+
+
