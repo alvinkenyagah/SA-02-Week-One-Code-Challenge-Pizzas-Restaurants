@@ -8,11 +8,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
     render json: restaurants
   end
 
-  # POST /restaurants
-  def create
-    restaurants = Restaurant.create!(restaurant_params)
-    render json: restaurants, status: :created
-  end
+
 
   # GET /restaurants/:id
   def show
