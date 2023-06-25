@@ -5,7 +5,7 @@ class RestaurantsController < ApplicationController
       # GET /restaurants
       def index
         restaurants = Restaurant.all
-        render json: restaurants, except: [:id, :created_at, :updated_at], status: :ok 
+        render json: restaurants, except: [:created_at, :updated_at], status: :ok 
       end
     
     
@@ -14,6 +14,7 @@ class RestaurantsController < ApplicationController
       def show
         # pizzas = find_pizzas
         restaurants = find_restaurants
+        
           render json: restaurants, except: [:id, :created_at, :updated_at], status: :ok                 
       end
 
@@ -21,7 +22,7 @@ class RestaurantsController < ApplicationController
       # DELETE /restaurants/:id
       def destroy
         restaurants = find_restaurants
-        restaurants
+        render json: restaurants 
         restaurants.destroy
         head :no_content        
       end

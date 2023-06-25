@@ -2,10 +2,6 @@
 class Restaurant < ApplicationRecord
   has_many :restaurant_pizzas
   has_many :pizzas, through: :restaurant_pizzas
-
-
-  # def pizzas
-  #   "#{"pizzas"}: #{pizzas}"
-  # end
+  protect_from_forgery with: :null_session
 
 end
