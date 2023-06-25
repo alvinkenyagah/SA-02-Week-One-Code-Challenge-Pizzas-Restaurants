@@ -14,7 +14,6 @@ class RestaurantsController < ApplicationController
     
       # GET /restaurants/:id
       def show
-        # pizzas = find_pizzas
         restaurants = find_restaurants
         
           render json: restaurants, except: [:id, :created_at, :updated_at], status: :ok                 

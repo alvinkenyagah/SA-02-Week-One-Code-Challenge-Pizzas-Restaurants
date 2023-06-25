@@ -35161,3 +35161,446 @@ Processing by PizzasController#create as */*
 Completed 201 Created in 27ms (Views: 0.4ms | ActiveRecord: 8.6ms | Allocations: 6493)
 
 
+Started POST "/pizzas" for 127.0.0.1 at 2023-06-26 00:20:34 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PizzasController#create as */*
+  Parameters: {"name"=>"Pineapple", "ingredients"=>"Curry tomatoe", "age"=>21, "pizza"=>{"name"=>"Pineapple", "ingredients"=>"Curry tomatoe"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pizzas_controller.rb:12:in `create'
+  [1m[36mPizza Create (0.3ms)[0m  [1m[32mINSERT INTO "pizzas" ("name", "ingredients", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pineapple"], ["ingredients", "Curry tomatoe"], ["created_at", "2023-06-25 21:20:34.596239"], ["updated_at", "2023-06-25 21:20:34.596239"]]
+  ↳ app/controllers/pizzas_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pizzas_controller.rb:12:in `create'
+Completed 201 Created in 18ms (Views: 0.3ms | ActiveRecord: 9.0ms | Allocations: 6036)
+
+
+Started GET "/pizzas" for 127.0.0.1 at 2023-06-26 00:24:23 +0300
+Processing by PizzasController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/pizzas_controller.rb:7:in `index'
+  [1m[36mPizza Load (0.2ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas"[0m
+  ↳ app/controllers/pizzas_controller.rb:7:in `index'
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 1.0ms | Allocations: 7032)
+
+
+Started GET "/restaurant_pizzas" for 127.0.0.1 at 2023-06-26 00:30:23 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant_pizzas"):
+  
+Started GET "/restaurant_pizzas" for 127.0.0.1 at 2023-06-26 00:30:54 +0300
+  
+SyntaxError (/home/alvin/hut/app/controllers/restaurant_pizzas_controller.rb:37: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/restaurant_pizzas_controller.rb:37: syntax error, unexpected `end', expecting end-of-input
+app/controllers/restaurant_pizzas_controller.rb:37: syntax error, unexpected `end', expecting end-of-input
+app/controllers/restaurant_pizzas_controller.rb:37: syntax error, unexpected `end', expecting end-of-input
+Started GET "/restaurant_pizzas" for 127.0.0.1 at 2023-06-26 00:31:06 +0300
+Processing by RestaurantPizzasController#index as HTML
+Completed 500 Internal Server Error in 4ms (Allocations: 2418)
+
+
+  
+NameError (uninitialized constant RestaurantPizzasController::RestaurantPizzas):
+  
+app/controllers/restaurant_pizzas_controller.rb:7:in `index'
+Started GET "/restaurant_pizzas" for 127.0.0.1 at 2023-06-26 00:31:24 +0300
+Processing by RestaurantPizzasController#index as HTML
+Completed 500 Internal Server Error in 2ms (Allocations: 2307)
+
+
+  
+NameError (uninitialized constant RestaurantPizzasController::RP):
+  
+app/controllers/restaurant_pizzas_controller.rb:7:in `index'
+Started GET "/restaurant_pizzas" for 127.0.0.1 at 2023-06-26 00:31:31 +0300
+Processing by RestaurantPizzasController#index as HTML
+Completed 500 Internal Server Error in 1ms (Allocations: 1012)
+
+
+  
+NoMethodError (undefined method `all' for nil:NilClass):
+  
+app/controllers/restaurant_pizzas_controller.rb:7:in `index'
+Started GET "/restaurant_pizzas" for 127.0.0.1 at 2023-06-26 00:31:38 +0300
+Processing by RestaurantPizzasController#index as HTML
+Completed 500 Internal Server Error in 9ms (Allocations: 3044)
+
+
+  
+NameError (undefined local variable or method `restaurantpizzas' for #<RestaurantPizzasController:0x00000000011440>
+Did you mean?  restaurant_pizzas):
+  
+app/controllers/restaurant_pizzas_controller.rb:7:in `index'
+Started GET "/restaurant_pizzas" for 127.0.0.1 at 2023-06-26 00:31:49 +0300
+Processing by RestaurantPizzasController#index as HTML
+Completed 500 Internal Server Error in 4ms (Allocations: 2396)
+
+
+  
+NameError (uninitialized constant RestaurantPizzasController::Restaurantpizzas):
+  
+app/controllers/restaurant_pizzas_controller.rb:7:in `index'
+Started GET "/restaurant_pizzas" for 127.0.0.1 at 2023-06-26 00:32:03 +0300
+Processing by RestaurantPizzasController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:8:in `index'
+  [1m[36mRestaurantPizza Load (0.1ms)[0m  [1m[34mSELECT "restaurant_pizzas".* FROM "restaurant_pizzas"[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 10.2ms | ActiveRecord: 1.1ms | Allocations: 7427)
+
+
+Started GET "/restaurant_pizzas" for 127.0.0.1 at 2023-06-26 00:57:25 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RestaurantPizzasController#index as */*
+  Parameters: {"title"=>"", "category"=>"horror", "content"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus, nulla vel condimentum ornare, arcu lorem hendrerit purus, ac sagittis ipsum nisl nec erat. Morbi porta sollicitudin leo, eu cursus libero posuere ac. Sed ac ultricies ante. Donec nec nulla ipsum. Nunc eleifend, ligula ut volutpat.", "restaurant_pizza"=>{}}
+  [1m[36mRestaurantPizza Load (0.1ms)[0m  [1m[34mSELECT "restaurant_pizzas".* FROM "restaurant_pizzas"[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.4ms | Allocations: 4554)
+
+
+Started POST "/restaurant_pizzas" for 127.0.0.1 at 2023-06-26 00:59:20 +0300
+Processing by RestaurantPizzasController#create as */*
+  Parameters: {"price"=>23, "pizza_id"=>5, "restaurant_id"=>3, "restaurant_pizza"=>{"price"=>23, "pizza_id"=>5, "restaurant_id"=>3}}
+[31mUnpermitted parameter: :restaurant_pizza[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+  [1m[36mPizza Load (0.2ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.3ms | Allocations: 22273)
+
+
+  
+NoMethodError (undefined method `protect_from_forgery' for Restaurant:Class):
+  
+app/models/restaurant.rb:5:in `<class:Restaurant>'
+app/models/restaurant.rb:2:in `<main>'
+app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+Started POST "/restaurant_pizzas" for 127.0.0.1 at 2023-06-26 01:01:35 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantPizzasController#create as */*
+  Parameters: {"price"=>23, "pizza_id"=>5, "restaurant_id"=>3, "restaurant_pizza"=>{"price"=>23, "pizza_id"=>5, "restaurant_id"=>3}}
+[31mUnpermitted parameter: :restaurant_pizza[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+  [1m[36mPizza Load (0.1ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.2ms | Allocations: 21398)
+
+
+  
+NoMethodError (undefined method `protect_from_forgery' for Restaurant:Class):
+  
+app/models/restaurant.rb:5:in `<class:Restaurant>'
+app/models/restaurant.rb:2:in `<main>'
+app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+Started POST "/restaurant_pizzas" for 127.0.0.1 at 2023-06-26 01:03:38 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NoMethodError (undefined method `protect_from_forgery' for RestaurantPizza:Class):
+  
+app/models/restaurant_pizza.rb:4:in `<class:RestaurantPizza>'
+app/models/restaurant_pizza.rb:1:in `<main>'
+Started GET "/restaurant/1" for 127.0.0.1 at 2023-06-26 01:04:37 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant/1"):
+  
+Started GET "/restaurants/" for 127.0.0.1 at 2023-06-26 01:04:47 +0300
+  
+NoMethodError (undefined method `protect_from_forgery' for Restaurant:Class):
+  
+app/models/restaurant.rb:5:in `<class:Restaurant>'
+app/models/restaurant.rb:2:in `<main>'
+Started GET "/restaurants/1" for 127.0.0.1 at 2023-06-26 01:05:36 +0300
+  
+NoMethodError (undefined method `protect_from_forgery' for Restaurant:Class):
+  
+app/models/restaurant.rb:5:in `<class:Restaurant>'
+app/models/restaurant.rb:2:in `<main>'
+Started GET "/restaurants/1" for 127.0.0.1 at 2023-06-26 01:05:54 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NoMethodError (undefined method `protect_from_forgery' for Restaurant:Class):
+  
+app/models/restaurant.rb:5:in `<class:Restaurant>'
+app/models/restaurant.rb:2:in `<main>'
+Started GET "/restaurant" for 127.0.0.1 at 2023-06-26 01:08:04 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant"):
+  
+Started GET "/restaurants/1" for 127.0.0.1 at 2023-06-26 01:08:24 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 6375)
+
+
+  
+NoMethodError (undefined method `protect_from_forgery' for Restaurant:Class):
+  
+app/models/restaurant.rb:5:in `<class:Restaurant>'
+app/models/restaurant.rb:2:in `<main>'
+app/controllers/restaurants_controller.rb:46:in `find_restaurants'
+app/controllers/restaurants_controller.rb:17:in `show'
+Started GET "/restaurants/1" for 127.0.0.1 at 2023-06-26 01:09:02 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/restaurants_controller.rb:46:in `find_restaurants'
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:46:in `find_restaurants'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 7181)
+
+
+Started GET "/restaurants/1000" for 127.0.0.1 at 2023-06-26 01:09:07 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1000"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1000], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:46:in `find_restaurants'
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 1045)
+
+
+Started GET "/restaurants/1000" for 127.0.0.1 at 2023-06-26 01:10:41 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1000"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1000], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:46:in `find_restaurants'
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 998)
+
+
+Started GET "/pizzas" for 127.0.0.1 at 2023-06-26 01:11:51 +0300
+Processing by PizzasController#index as HTML
+  [1m[36mPizza Load (0.2ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas"[0m
+  ↳ app/controllers/pizzas_controller.rb:7:in `index'
+Completed 200 OK in 12ms (Views: 6.9ms | ActiveRecord: 0.8ms | Allocations: 5951)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2023-06-26 01:13:15 +0300
+Processing by RestaurantsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/restaurants_controller.rb:55:in `index'
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:55:in `index'
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.9ms | Allocations: 6788)
+
+
+Started GET "/restaurants/1" for 127.0.0.1 at 2023-06-26 01:13:21 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:72:in `find_restaurant'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 989)
+
+
+Started GET "/restaurants/1222" for 127.0.0.1 at 2023-06-26 01:13:25 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1222"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1222], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:72:in `find_restaurant'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/restaurants/1222" for 127.0.0.1 at 2023-06-26 01:14:33 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1222"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/restaurants_controller.rb:72:in `find_restaurant'
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1222], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:72:in `find_restaurant'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 3851)
+
+
+Started GET "/restaurants/1222" for 127.0.0.1 at 2023-06-26 01:15:35 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1222"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/restaurants_controller.rb:72:in `find_restaurant'
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1222], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:72:in `find_restaurant'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.9ms | Allocations: 6654)
+
+
+  
+NameError (undefined local variable or method `restaurants' for #<RestaurantsController:0x0000000000b798>
+Did you mean?  restaurant):
+  
+app/controllers/restaurants_controller.rb:60:in `show'
+Started GET "/restaurants/1222" for 127.0.0.1 at 2023-06-26 01:15:45 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1222"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/restaurants_controller.rb:72:in `find_restaurant'
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1222], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:72:in `find_restaurant'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 3854)
+
+
+Started GET "/restaurants/1222" for 127.0.0.1 at 2023-06-26 01:16:39 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1222"}
+Completed 500 Internal Server Error in 9ms (Allocations: 2879)
+
+
+  
+NameError (undefined local variable or method `find_restaurants' for #<RestaurantsController:0x0000000000d9d0>
+Did you mean?  find_restaurant):
+  
+app/controllers/restaurants_controller.rb:60:in `show'
+Started GET "/restaurants/1222" for 127.0.0.1 at 2023-06-26 01:16:51 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1222"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/restaurants_controller.rb:75:in `find_restaurant'
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1222], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:75:in `find_restaurant'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 3857)
+
+
+Started GET "/restaurants/1222" for 127.0.0.1 at 2023-06-26 01:17:12 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1222"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/restaurants_controller.rb:75:in `find_restaurant'
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:75:in `find_restaurant'
+Completed 404 Not Found in 10ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 5087)
+
+
+Started GET "/restaurants/1222" for 127.0.0.1 at 2023-06-26 01:18:08 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1222"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/restaurants_controller.rb:72:in `find_restaurant'
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1222], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:72:in `find_restaurant'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 3848)
+
+
+Started GET "/restaurants/1222" for 127.0.0.1 at 2023-06-26 01:18:14 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1222"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/restaurants_controller.rb:72:in `find_restaurant'
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:72:in `find_restaurant'
+Completed 404 Not Found in 10ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 5101)
+
+
+Started GET "/restaurants/1222" for 127.0.0.1 at 2023-06-26 01:19:53 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1222"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:72:in `find_restaurant'
+Completed 404 Not Found in 3ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 1842)
+
+
+Started GET "/restaurants/1" for 127.0.0.1 at 2023-06-26 01:22:09 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RestaurantsController#show as */*
+  Parameters: {"name"=>"Pineapple", "ingredients"=>"Curry tomatoe", "age"=>21, "id"=>"1", "restaurant"=>{"name"=>"Pineapple"}}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:46:in `find_restaurants'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 3322)
+
+
+Started POST "/restaurant_pizzas" for 127.0.0.1 at 2023-06-26 01:22:16 +0300
+  
+NoMethodError (undefined method `protect_from_forgery' for RestaurantPizza:Class):
+  
+app/models/restaurant_pizza.rb:4:in `<class:RestaurantPizza>'
+app/models/restaurant_pizza.rb:1:in `<main>'
+Started GET "/restaurant_pizzas" for 127.0.0.1 at 2023-06-26 01:22:37 +0300
+  
+NoMethodError (undefined method `protect_from_forgery' for RestaurantPizza:Class):
+  
+app/models/restaurant_pizza.rb:4:in `<class:RestaurantPizza>'
+app/models/restaurant_pizza.rb:1:in `<main>'
+Started GET "/restaurant_pizzas" for 127.0.0.1 at 2023-06-26 01:22:55 +0300
+Processing by RestaurantPizzasController#index as HTML
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms | Allocations: 8788)
+
+
+  
+NoMethodError (undefined method `protect_from_forgery' for RestaurantPizza:Class):
+  
+app/models/restaurant_pizza.rb:4:in `<class:RestaurantPizza>'
+app/models/restaurant_pizza.rb:1:in `<main>'
+app/controllers/restaurant_pizzas_controller.rb:5:in `index'
+Started GET "/restaurant_pizzas" for 127.0.0.1 at 2023-06-26 01:23:22 +0300
+Processing by RestaurantPizzasController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:6:in `index'
+  [1m[36mRestaurantPizza Load (0.1ms)[0m  [1m[34mSELECT "restaurant_pizzas".* FROM "restaurant_pizzas"[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 1.0ms | Allocations: 7167)
+
+
+Started POST "/restaurant_pizzas" for 127.0.0.1 at 2023-06-26 01:23:32 +0300
+Processing by RestaurantPizzasController#create as */*
+  Parameters: {"price"=>23, "pizza_id"=>5, "restaurant_id"=>3, "restaurant_pizza"=>{"price"=>23, "pizza_id"=>5, "restaurant_id"=>3}}
+[31mUnpermitted parameter: :restaurant_pizza[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+  [1m[36mPizza Load (0.1ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+  [1m[36mRestaurantPizza Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurant_pizzas" ("price", "pizza_id", "restaurant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["price", 23], ["pizza_id", 5], ["restaurant_id", 3], ["created_at", "2023-06-25 22:23:32.897498"], ["updated_at", "2023-06-25 22:23:32.897498"]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 10.0ms | Allocations: 25619)
+
+
+  
+NameError (undefined local variable or method `pizzas' for #<RestaurantPizzasController:0x000000000144b0>
+Did you mean?  pizzas_url):
+  
+app/controllers/restaurant_pizzas_controller.rb:12:in `create'
+Started POST "/restaurant_pizzas" for 127.0.0.1 at 2023-06-26 01:24:54 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantPizzasController#create as */*
+  Parameters: {"price"=>23, "pizza_id"=>5, "restaurant_id"=>3, "restaurant_pizza"=>{"price"=>23, "pizza_id"=>5, "restaurant_id"=>3}}
+[31mUnpermitted parameter: :restaurant_pizza[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+  [1m[36mPizza Load (0.1ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+  [1m[36mRestaurantPizza Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurant_pizzas" ("price", "pizza_id", "restaurant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["price", 23], ["pizza_id", 5], ["restaurant_id", 3], ["created_at", "2023-06-25 22:24:54.535191"], ["updated_at", "2023-06-25 22:24:54.535191"]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 9.5ms | Allocations: 25845)
+
+
+  
+NameError (undefined local variable or method `pizzas' for #<RestaurantPizzasController:0x00000000006f68>
+Did you mean?  pizzas_url):
+  
+app/controllers/restaurant_pizzas_controller.rb:12:in `create'
+Started POST "/restaurant_pizzas" for 127.0.0.1 at 2023-06-26 01:25:42 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RestaurantPizzasController#create as */*
+  Parameters: {"price"=>23, "pizza_id"=>5, "restaurant_id"=>3, "restaurant_pizza"=>{"price"=>23, "pizza_id"=>5, "restaurant_id"=>3}}
+[31mUnpermitted parameter: :restaurant_pizza[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+  [1m[36mPizza Load (0.1ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+  [1m[36mRestaurantPizza Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurant_pizzas" ("price", "pizza_id", "restaurant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["price", 23], ["pizza_id", 5], ["restaurant_id", 3], ["created_at", "2023-06-25 22:25:42.383733"], ["updated_at", "2023-06-25 22:25:42.383733"]]
+  ↳ app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/restaurant_pizzas_controller.rb:11:in `create'
+Completed 201 Created in 37ms (Views: 0.5ms | ActiveRecord: 10.3ms | Allocations: 17792)
+
+
