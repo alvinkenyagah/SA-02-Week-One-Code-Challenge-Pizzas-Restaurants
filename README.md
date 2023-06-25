@@ -1,1 +1,1 @@
-# SA-02-Week-One-Code-Challenge-Pizzas-Restaurants-
+# SA-02-Week-One-Code-Challenge-Pizzas-Restaurants
