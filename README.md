@@ -12,6 +12,13 @@ The entities in the project contain the following relationships:
 
 - A `RestaurantPizza` belongs to a `Restaurant` and belongs to a `Pizza`
 
+### Setup
+
+- `git clone git@github.com:alvinkenyagah/SA-02-Week-One-Code-Challenge-Pizzas-Restaurants.git`
+  
+- `cd SA-02-Week-One-Code-Challenge-Pizzas-Restaurants `
+  
+
 ### License
 
 MIT License
